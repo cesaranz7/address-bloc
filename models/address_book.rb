@@ -12,7 +12,7 @@ class AddressBook
 
     @entries.each do |entry|
       if name == entry.name && phone == entry.phone_number && email == entry.email
-        delete_entry == entry
+        delete_entry = entry
         end
       end
 

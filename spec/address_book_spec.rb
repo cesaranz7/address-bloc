@@ -28,11 +28,11 @@ require_relative '../models/address_book'
        email_address = 'augusta.king@lovelace.com'
        book.add_entry(name, phone_number, email_address)
 
+       puts book.entries.map(&:name)
        expect(book.entries.size).to eq 2
        book.remove_entry(name, phone_number, email_address)
        expect(book.entries.size).to eq 1
        expect(book.entries.first.name).to eq('Michael Faraday')
-       puts book.entries.map(&:name)
      end
    end
 
